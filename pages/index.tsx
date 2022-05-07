@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Sidebar from '../Components/Sidebar'
 
 
 const Home: NextPage = () => {
@@ -13,12 +14,12 @@ const Home: NextPage = () => {
 
       <main>
 
-        {/* Sidebar */}
+        <Sidebar/>
 
         {/* Feed */}
 
         {/* Widget */}
-        
+
       </main>
 
       </div>
