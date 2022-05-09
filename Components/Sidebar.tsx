@@ -13,8 +13,11 @@ import Image from 'next/image';
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col ">
-        <Image  width={40}  height={40} layout='fixed' src="https://links.papareact.com/drq" alt="twitter logo" />
+    <div className="col-span-2 flex flex-col items-center px-4 md:items-start ">
+      <div className="m-3">
+      <Image  width={40}  height={40}  src="https://links.papareact.com/drq" alt="twitter logo" />
+      </div>
+        
         <SidebarRow  Icon = {HomeIcon} title='Home'/>
         <SidebarRow Icon = {HashtagIcon} title='Explore'/>
         <SidebarRow Icon = {BellIcon} title='Notifications'/>
