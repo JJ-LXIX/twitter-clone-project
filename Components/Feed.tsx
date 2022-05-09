@@ -1,8 +1,13 @@
 import { RefreshIcon } from '@heroicons/react/outline'
 import React from 'react'
+import { Tweet } from '../typing'
 import TweetBox from './TweetBox'
+import TweetComponent from '../Components/Tweet';
+interface Props {
+  tweets : Tweet[]
+}
 
-const Feed = () => {
+const Feed = ({tweets}:Props) => {
   return (
     <div className='col-span-7 border-x lg:col-span-5'>
         <div className='flex items-center justify-between'>
@@ -13,6 +18,11 @@ const Feed = () => {
 
         {/* TweetBox */}
         <div><TweetBox/></div>
+
+        {/* Tweet Feed */}
+        {tweets.map(tweet=>(
+          <TweetComponent key={tweet._id} tweet={tweet}/>
+        ))}
         
     </div>
   )
