@@ -1,5 +1,6 @@
 import type { GetServerSideProps, NextPage } from 'next'
 import Head from 'next/head'
+import { Toaster } from 'react-hot-toast'
 import Feed from '../Components/Feed'
 import Sidebar from '../Components/Sidebar'
 import Widgets from '../Components/Widgets'
@@ -21,6 +22,8 @@ const Home = ({tweets}:Props) => {
         <meta name="description" content="A Twitter Clone Built with the help of NextJS" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Toaster/>
 
       <main className='grid grid-cols-9'>
         <Sidebar/>
