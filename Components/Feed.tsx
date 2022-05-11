@@ -25,7 +25,7 @@ const Feed = ({tweets :tweetsProp}:Props) => {
   }
 
   return (
-    <div className='col-span-7 border-x lg:col-span-5'>
+    <div className='col-span-7 border-x max-h-screen overflow-scroll lg:col-span-5'>
         <div className='flex items-center justify-between'>
             <h1 className="p-5 pb-0 text-xl font-bold">Home</h1>
             <RefreshIcon onClick={handleRefresh} className="mr-5 mt-5 h-8 w-8 cursor-pointer text-twitter__blue  transition-all duration-500 ease-out 
@@ -33,7 +33,7 @@ const Feed = ({tweets :tweetsProp}:Props) => {
         </div>
 
         {/* TweetBox */}
-        <div><TweetBox/></div>
+        <div><TweetBox setTweets={setTweets}/></div>
 
         {/* Tweet Feed */}
         {tweets.map(tweet=>(
